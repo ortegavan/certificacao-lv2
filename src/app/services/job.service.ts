@@ -11,9 +11,9 @@ export class JobService {
     httpClient = inject(HttpClient);
 
     /**
-     * Obtém todas as vagas de emprego
+     * Get all jobs
      */
-    public getJobs(): Observable<Job[]> {
-        return this.httpClient.get<Job[]>(this.endpoint);
+    public getJobs(): Observable<Partial<Job>[]> {
+        return this.httpClient.get<Partial<Job>[]>(this.endpoint);
     }
 }

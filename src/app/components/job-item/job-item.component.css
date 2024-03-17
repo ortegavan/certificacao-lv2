@@ -1,0 +1,38 @@
+h2 {
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+.job-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 24px;
+    gap: 24px;
+    background-color: #232329;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.job-logo {
+    height: 80px;
+    width: 80px;
+}
+
+.job-logo img {
+    border-radius: 8px;
+}
+
+.job-reference {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+}
+
+.job-reference span {
+    color: #999;
+}
+
+.job-favorite {
+    margin-left: auto;
+}

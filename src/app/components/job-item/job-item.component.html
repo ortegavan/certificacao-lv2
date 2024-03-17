@@ -1,0 +1,21 @@
+<section class="job-item">
+    <div class="job-logo">
+        <img [src]="job.companyLogo" [alt]="job.companyName">
+    </div>
+    <div class="job-summary">
+        <h2>
+            {{ job.title }}
+        </h2>
+        <div class="job-reference">
+            <small>
+                <span>Company:</span> {{ job.companyName }}
+            </small>
+            <small>
+                <span>Reference:</span> {{ job.reference }}
+            </small>
+        </div>
+    </div>
+    <div class="job-favorite">
+        <span class="icon-star large" [id]="'star-' + job.id"></span>
+    </div>
+</section>
