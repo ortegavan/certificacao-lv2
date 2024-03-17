@@ -16,6 +16,6 @@
         </div>
     </div>
     <div class="job-favorite" (click)="onStarClick()">
-        <span class="icon-star large" [id]="'star-' + job.id"></span>
+        <span class="icon-star large" [id]="'star-' + job.id" [class.active]="job.starred"></span>
     </div>
 </section>

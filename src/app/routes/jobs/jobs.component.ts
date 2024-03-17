@@ -22,7 +22,6 @@ export class JobsComponent implements OnInit {
     }
 
     onStarClick(job: Partial<Job>) {
-        // this.service.toggleStarred(job);
-        console.log('Star clicked', job.id);
+        this.service.toggleFavorite(job);
     }
 }

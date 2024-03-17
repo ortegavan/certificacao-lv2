@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+    Component,
+    ElementRef,
+    EventEmitter,
+    Input,
+    Output,
+    inject,
+} from '@angular/core';
 import { Job } from '../../models/job.model';
 
 @Component({
@@ -9,6 +16,7 @@ import { Job } from '../../models/job.model';
     styleUrl: './job-item.component.css',
 })
 export class JobItemComponent {
+    elementRef = inject(ElementRef);
     /**
      * The job to display
      */
@@ -23,6 +31,7 @@ export class JobItemComponent {
      * Emits when the star is clicked
      */
     onStarClick() {
+        this.job.starred = !this.job.starred;
         this.starClicked.emit(this.job);
     }
 }

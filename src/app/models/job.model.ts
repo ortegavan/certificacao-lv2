@@ -12,4 +12,5 @@ export type Job = {
     industries: string;
     publishDate: Date;
     location: string;
+    starred: boolean;
 };

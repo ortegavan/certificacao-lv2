@@ -14,6 +14,10 @@ html {
     background: url("./assets/star.svg") no-repeat;
 }
 
+.icon-star.active {
+    background: url("./assets/star-active.svg") no-repeat;
+}
+
 .icon-star.large {
     width: 24px;
     height: 24px;
