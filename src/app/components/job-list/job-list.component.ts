@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Job } from '../../models/job.model';
 import { JobItemComponent } from '../job-item/job-item.component';
 
@@ -14,4 +14,16 @@ export class JobListComponent {
      * The list of jobs to display.
      */
     @Input() jobs!: Partial<Job>[] | null;
+
+    /**
+     * Emits when the star is clicked
+     */
+    @Output() starClicked = new EventEmitter<Partial<Job>>();
+
+    /**
+     * Emits when the star is clicked
+     */
+    onStarClick(job: Partial<Job>) {
+        this.starClicked.emit(job);
+    }
 }

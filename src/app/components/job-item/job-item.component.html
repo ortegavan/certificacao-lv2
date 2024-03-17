@@ -15,7 +15,7 @@
             </small>
         </div>
     </div>
-    <div class="job-favorite">
+    <div class="job-favorite" (click)="onStarClick()">
         <span class="icon-star large" [id]="'star-' + job.id"></span>
     </div>
 </section>

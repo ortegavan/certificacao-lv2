@@ -1,5 +1,5 @@
-<section class="jobs">
-    @for (job of jobs; track $index) {
-    <job-item [job]="job" />
+<section class="jobs margin-top">
+    @for (job of jobs; track job.id) {
+    <job-item [job]="job" (starClicked)="onStarClick(job)" />
     }
 </section>

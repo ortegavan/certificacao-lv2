@@ -1,5 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
 @import "../node_modules/mini.css/dist/mini-dark.min.css";
+
+html {
+    --background-color: #232329;
+    --background-hover: #2c2c31;
+    --small: #999;
+}
+
+.margin-top {
+    margin-top: 32px;
+}
 
 .icon-star {
     background: url("./assets/star.svg") no-repeat;

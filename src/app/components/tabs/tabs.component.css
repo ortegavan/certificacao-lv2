@@ -1,0 +1,26 @@
+.tabs {
+    display: flex;
+    width: 100%;
+    background-color: var(--background-color);
+    border-radius: 12px;
+}
+
+.tabs a {
+    flex: 1;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabs a:hover {
+    background-color: var(--background-hover);
+    border-radius: 12px;
+}
+
+.tabs a.active {
+    background-color: var(--background-hover);
+    border-radius: 12px;
+}

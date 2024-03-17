@@ -1,1 +1,2 @@
-<job-list [jobs]="jobs$ | async" />
+<job-tabs />
+<job-list [jobs]="jobs$ | async" (starClicked)="onStarClick($event)" />

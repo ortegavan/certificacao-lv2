@@ -6,12 +6,16 @@ h2 {
 .job-item {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 48px);
     padding: 24px;
     gap: 24px;
-    background-color: #232329;
+    background-color: var(--background-color);
     border-radius: 12px;
     cursor: pointer;
+}
+
+.job-item:hover {
+    background-color: var(--background-hover);
 }
 
 .job-logo {
@@ -30,7 +34,7 @@ h2 {
 }
 
 .job-reference span {
-    color: #999;
+    color: var(--small);
 }
 
 .job-favorite {
