@@ -1,2 +1,3 @@
 <job-tabs />
-<job-list [jobs]="jobs$ | async" (starClicked)="onStarClick($event)" />
+<job-list [jobs]="jobs$ | async" (starClicked)="onStarClick($event)" *ngIf="route.children.length <= 0" />
+<router-outlet />

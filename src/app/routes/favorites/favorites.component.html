@@ -1,9 +1,11 @@
 <job-tabs />
-@if (service.favorites.length) {
-<job-list [jobs]="service.favorites" (starClicked)="onStarClick($event)" />
+@if (route.children.length
+<= 0) { @if (service.favorites.length) { <job-list [jobs]="service.favorites" (starClicked)="onStarClick($event)" />
 } @else {
 <div class="alert">
     <strong>No favorites! </strong>
     Click on the star icon to add a job to your favorites.
 </div>
 }
+}
+<router-outlet />

@@ -1,0 +1,51 @@
+section {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.job-header {
+    display: flex;
+    gap: 24px;
+}
+
+.job-header img {
+    height: 80px;
+    width: 80px;
+    border-radius: 8px;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chips {
+    display: flex;
+    gap: 8px;
+}
+
+.chip {
+    background-color: blueviolet;
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.back {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.back:hover {
+    background-color: var(--background-hover);
+}
+
+strong {
+    color: var(--small);
+}

@@ -1,1 +1,3 @@
-<p>job works!</p>
+<section class="margin-top" *ngIf="(job$ | async) as job">
+    <job-details [job]="job" />
+</section>

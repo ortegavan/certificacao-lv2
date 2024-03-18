@@ -1,1 +1,37 @@
-<p>job-details works!</p>
+<section class="margin-top">
+    <div (click)="back()" class="back">
+        <span class="icon-home"></span>
+        Back
+    </div>
+    <div class="job-header">
+        <div>
+            <img [src]="job.companyLogo" [alt]="job.companyName">
+        </div>
+        <div>
+            <h2>
+                {{ job.companyName }} - {{ job.title }}
+            </h2>
+            <div class="chips">
+                <small class="chip" *ngFor="let type of job.types" [innerHTML]="type">
+                </small>
+                <small class="chip" *ngFor="let industry of job.industries" [innerHTML]="industry">
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="job-details margin-top">
+        <div>
+            <strong>Publish date: </strong>{{ job.publishDate | date: 'MM/dd/yy' }}
+        </div>
+        <div>
+            <strong>Location: </strong>{{ job.location }}
+        </div>
+        <div>
+            <strong>Reference: </strong>{{ job.reference }}
+        </div>
+        <div>
+            <strong>Description:</strong><br>
+            <div [innerHTML]="job.description"></div>
+        </div>
+    </div>
+</section>

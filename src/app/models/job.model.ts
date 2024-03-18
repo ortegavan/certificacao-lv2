@@ -8,8 +8,8 @@ export type Job = {
     companyName: string;
     companyLogo: string;
     description: string;
-    types: string;
-    industries: string;
+    types: string[];
+    industries: string[];
     publishDate: Date;
     location: string;
     starred: boolean;

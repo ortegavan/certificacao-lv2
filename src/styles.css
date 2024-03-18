@@ -6,6 +6,11 @@ html {
     --small: #999;
 }
 
+h2 {
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
 .margin-top {
     margin-top: 32px;
 }

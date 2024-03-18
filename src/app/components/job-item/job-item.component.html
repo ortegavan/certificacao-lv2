@@ -3,7 +3,7 @@
         <img [src]="job.companyLogo" [alt]="job.companyName">
     </div>
     <div class="job-summary">
-        <h2>
+        <h2 (click)="onJobClick()">
             {{ job.title }}
         </h2>
         <div class="job-reference">

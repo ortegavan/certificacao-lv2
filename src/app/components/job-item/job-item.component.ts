@@ -1,12 +1,6 @@
-import {
-    Component,
-    ElementRef,
-    EventEmitter,
-    Input,
-    Output,
-    inject,
-} from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { Job } from '../../models/job.model';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'job-item',
@@ -16,7 +10,9 @@ import { Job } from '../../models/job.model';
     styleUrl: './job-item.component.css',
 })
 export class JobItemComponent {
-    elementRef = inject(ElementRef);
+    router = inject(Router);
+    route = inject(ActivatedRoute);
+
     /**
      * The job to display
      */
@@ -33,5 +29,9 @@ export class JobItemComponent {
     onStarClick() {
         this.job.starred = !this.job.starred;
         this.starClicked.emit(this.job);
+    }
+
+    onJobClick() {
+        this.router.navigate([this.job.id], { relativeTo: this.route });
     }
 }
