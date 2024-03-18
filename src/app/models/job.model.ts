@@ -1,5 +1,5 @@
 /**
- * Representa uma vaga de emprego
+ * Represents a job
  */
 export type Job = {
     id: number;

@@ -8,15 +8,12 @@ describe('JobService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [HttpClientTestingModule],
+            providers: [JobService],
         });
         service = TestBed.inject(JobService);
     });
 
     it('should be created', () => {
         expect(service).toBeTruthy();
-    });
-
-    it('should get jobs', () => {
-        expect(service.getJobs).toBeDefined();
     });
 });

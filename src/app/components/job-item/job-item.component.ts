@@ -31,6 +31,9 @@ export class JobItemComponent {
         this.starClicked.emit(this.job);
     }
 
+    /**
+     * Navigate to the job details page
+     */
     onJobClick() {
         this.router.navigate([this.job.id], { relativeTo: this.route });
     }

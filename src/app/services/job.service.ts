@@ -11,10 +11,16 @@ export class JobService {
     httpClient = inject(HttpClient);
     starred: Partial<Job>[] = [];
 
+    /**
+     * Get all favorites
+     */
     public get favorites(): Partial<Job>[] {
         return this.starred;
     }
 
+    /**
+     * Set favorites
+     */
     public set favorites(value: Partial<Job>[]) {
         this.starred = value;
     }
@@ -23,16 +29,14 @@ export class JobService {
      * Get all jobs
      */
     public getJobs(): Observable<Partial<Job>[]> {
-        return this.httpClient
-            .get<Partial<Job>[]>(this.endpoint)
-            .pipe(
-                map((jobs) =>
-                    jobs.map((job) => ({
-                        ...job,
-                        starred: this.starred.some((s) => s.id === job.id),
-                    }))
-                )
-            );
+        return this.httpClient.get<Partial<Job>[]>(this.endpoint).pipe(
+            map((jobs) =>
+                jobs.map((job) => ({
+                    ...job,
+                    starred: this.starred.some((s) => s.id === job.id),
+                }))
+            )
+        );
     }
 
     /**

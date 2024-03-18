@@ -13,6 +13,9 @@ export class JobDetailsComponent {
     location = inject(Location);
     @Input({ required: true }) job!: Job;
 
+    /**
+     * Go back to the previous page
+     */
     back() {
         this.location.back();
     }

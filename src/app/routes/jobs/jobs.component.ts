@@ -19,10 +19,16 @@ export class JobsComponent implements OnInit {
     service = inject(JobService);
     jobs$!: Observable<Partial<Job>[]>;
 
+    /**
+     * When the component is initialized, get all jobs
+     */
     ngOnInit() {
         this.jobs$ = this.service.getJobs();
     }
 
+    /**
+     * When a star is clicked, add/remove the job to/from favorites
+     */
     onStarClick(job: Partial<Job>) {
         this.service.toggleFavorite(job);
     }
