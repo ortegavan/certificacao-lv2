@@ -13,7 +13,7 @@ export class JobListComponent {
     /**
      * The list of jobs to display.
      */
-    @Input() jobs!: Partial<Job>[] | null;
+    @Input() jobs!: Partial<Job>[];
 
     /**
      * Emits when the star is clicked
